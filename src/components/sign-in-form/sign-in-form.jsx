@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cerateUserDocumentFromAuth, signInWithGooglePopup, signInAuthWithEmailAndPassword } from "../../utils/firebase";
+import { signInWithGooglePopup, signInAuthWithEmailAndPassword } from "../../utils/firebase";
 import FormInput from "../sign-up-form-input/form-input";
 import Button from "../button/button";
 import "../sign-up-form/sign-up-form.scss"
@@ -19,13 +19,13 @@ const SignInForm = () => {
         setFormFields({ ...formFields, [name]: value })
         // 先复制一遍当前formFields再对其中想要修改的内容进行覆盖
     }
-    const clearAll = () => {
-        setFormFields(defaultFormFields)
-    }
+    // const clearAll = () => {
+    //     setFormFields(defaultFormFields)
+    // }
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await signInAuthWithEmailAndPassword(email, password)
+            await signInAuthWithEmailAndPassword(email, password)
         } catch (error) {
 
             switch (error.code) {

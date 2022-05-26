@@ -34,7 +34,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 // 供应商为谷歌，也可为github等等
 provider.setCustomParameters({

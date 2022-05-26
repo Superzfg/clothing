@@ -3,7 +3,7 @@ import { CartContext } from "../../context/cart-dropdown-context "
 import { useContext } from "react";
 import CheckoutItem from "../../components/checkout-item/checkout-item";
 const Checkout = () => {
-    const { cartItems, addItemsToCart, redItemsToCart } = useContext(CartContext)
+    const { cartItems } = useContext(CartContext)
     const cartTotal = cartItems.reduce((pre, item) => (pre + item.price * item.quantity), 0)
     return (
         <div className='checkout-container'>

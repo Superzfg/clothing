@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { CartContext } from "../../context/cart-dropdown-context "
 import "./product-card.scss"
 const ProductCard = ({ product }) => {
-    const { addItemsToCart, cartItems } = useContext(CartContext)
+    const { addItemsToCart } = useContext(CartContext)
     const { name, price, imageUrl } = product
     const addToCart = () => {
         addItemsToCart(product)

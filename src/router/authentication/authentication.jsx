@@ -1,4 +1,3 @@
-import { auth, signInWithGooglePopup, cerateUserDocumentFromAuth, signInWithGoogleRedirect } from "../../utils/firebase"
 
 // import { getRedirectResult } from "firebase/auth"
 import SignInForm from "../../components/sign-in-form/sign-in-form"
