@@ -1,0 +1,13 @@
+.category-router-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 50px;
+    padding: 20px 50px;
+}
+
+.category-router-title {
+    font-size: 48px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
